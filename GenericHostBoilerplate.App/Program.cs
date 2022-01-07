@@ -21,4 +21,5 @@ static IHostBuilder CreateHostBuilder(string[] args) =>
             options.AddEnvironmentVariables();
             options.AddJsonFile("appsettings.json", optional: false);
             options.AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("DOTNET_ENVIRONMENT")}.json", optional: false);
-        });
+        })
+        .UseWindowsService();

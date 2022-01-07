@@ -42,7 +42,7 @@ namespace GenericHostBoilerplate.App.HostedServices
             _logger.LogInformation($"Example service returned {result}");
 
             _logger.LogInformation("Finished executing. Exiting.");
-            _hostLifetime.StopApplication();
+            //_hostLifetime.StopApplication();
         }
 
         public override Task StartAsync(CancellationToken cancellationToken)
